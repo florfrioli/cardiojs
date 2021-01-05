@@ -584,9 +584,10 @@ footer .footer-redes a:hover{
 
 @media screen and (max-width:550px){
   /*Banner principal*/
-  .main .banner-principal .texto-banner h1{
-    font-size: 4em;
+  .main .banner-principal .banner{
+    background-image: url('../img/cardiobanner2.png');
   }
+  
   /*Titulo secciones*/
   .titulo-seccion h2{
     font-size: 2.125em;
