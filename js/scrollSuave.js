@@ -40,7 +40,7 @@ $(document).ready(function () {
 
   $('a.scroll-nosotros').on('click', function (e) {
     e.preventDefault();
-    var seccionOffsetTop = $($(this).attr('href')).offset().top 
+    var seccionOffsetTop = $($(this).attr('href')).offset().top +20
     $('html, body').stop().animate({scrollTop: seccionOffsetTop}, 1000);
   });
 
@@ -50,5 +50,10 @@ $(document).ready(function () {
     $('html, body').stop().animate({scrollTop: seccionOffsetTop}, 1000);
   });
 
+  $('a.scroll-contacto').on('click', function (e) {
+    e.preventDefault();
+    var seccionOffsetTop = $($(this).attr('href')).offset().top + 20
+    $('html, body').stop().animate({scrollTop: seccionOffsetTop}, 1000);
+  });
 
 });

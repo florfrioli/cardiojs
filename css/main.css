@@ -249,6 +249,48 @@ body{
   justify-content: space-between;
 }
 
+.logo-small{
+  color: #CF3027;
+  font-size: 50px;
+}
+
+.col-sm-4{
+  color: black;
+}
+
+.slideanim {
+  visibility:visible;
+}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+
+/* aparicion de iconos */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
 /*Sección información extra*/
 
 .main .info-extra{
@@ -263,7 +305,7 @@ body{
   flex-wrap: wrap;
   align-items: center;
 }
-/* agrego: */
+
 .panel {
   border: 1px solid#AB2E37; 
   border-radius:0 !important;
@@ -309,15 +351,9 @@ body{
   transition: all .7s ease;
 }
 
-
 /*Contacto*/
-
 .main .contacto{
-  padding: 190px 0;
-  /*background-image: url('../img/bg-contacto.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;*/
+  padding: 100px 0px;
 }
 
 .main .contacto .contenedor-formulario{
@@ -444,49 +480,12 @@ footer .footer-redes a:hover{
   color: #CF3027;
 }
 
-
-/* agrego */
-.logo-small{
-  color: #CF3027;
-  font-size: 50px;
-}
-
-.col-sm-4{
-  color: black;
-}
-
-
-.slideanim {visibility:visible;}
-  .slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-  }
-
-
-
-
 /* ----- MEDIA QUERIES ----- */
 
 @media screen and (max-width:1040px){
   /*Nuestro equipo*/
   .main .nuestro-equipo .titulo-seccion{
     margin-bottom: 60px;
-  }
-  .main .nuestro-equipo .especialidades .persona-equipo{
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: left;
-  }
-  .main .nuestro-equipo .especialidades .persona-equipo:first-child{
-    top: -20px;
-  }
-  .main .nuestro-equipo .especialidades .persona-equipo .foto{
-    margin-right: 20px;
   }
 
   /*Sección información extra*/
@@ -499,6 +498,10 @@ footer .footer-redes a:hover{
 }
 
 @media screen and (max-width: 900px){
+  /*Banner principal*/
+  .main .banner-principal .banner{
+    background-image: url('../img/cardiobanner2.png');
+  }
   /*Encabezado*/
   .menu-bar-pc{
     display: none;
@@ -583,11 +586,6 @@ footer .footer-redes a:hover{
 }
 
 @media screen and (max-width:550px){
-  /*Banner principal*/
-  .main .banner-principal .banner{
-    background-image: url('../img/cardiobanner2.png');
-  }
-  
   /*Titulo secciones*/
   .titulo-seccion h2{
     font-size: 2.125em;
@@ -597,31 +595,14 @@ footer .footer-redes a:hover{
     width: 49%;
   }
   /*Nuestro equipo*/
-  .main .nuestro-equipo .especialidades .persona-equipo{
-    flex-direction: column;
-    align-items: center;
+  .col-sm-4 {
     text-align: center;
+    margin: 25px 0;
   }
   /*Sección información extra*/
   .main .info-extra .contenedor .info .contenido-info{
     flex-wrap: wrap;
     text-align: center;
-  }
-  .main .info-extra .contenedor .info .contenido-info .icono-info{
-    width: 100%;
-    margin-bottom: 25px;
-  }
-  .main .info-extra .contenedor .info .contenido-info .icono-info i{
-    font-size: 3.5em;
-  }
-  .main .info-extra .contenedor .info .contenido-info .texto-info{
-    margin-left: 0;
-  }
-  .main .info-extra .contenedor .info .contenido-info .texto-info h4{
-    font-size: 1.175em;
-  }
-  .main .info-extra .contenedor .info .contenido-info:first-child{
-    margin-bottom: 40px;
   }
   /*Contacto*/
   .main .contacto .contenedor-formulario .formulario{
@@ -629,35 +610,4 @@ footer .footer-redes a:hover{
   }
 }
 
-/* agrego */
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  } 
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-@-webkit-keyframes slide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(70%);
-  } 
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-  }
-}
-@media screen and (max-width: 768px) {
-  .col-sm-4 {
-    text-align: center;
-    margin: 25px 0;
-  }
-  .btn-lg {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-}
 
