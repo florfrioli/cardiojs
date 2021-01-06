@@ -254,6 +254,21 @@ body{
   font-size: 50px;
 }
 
+div[id^='especialidad-']:hover{
+  background-color: #CF3027;
+}
+div[id^='especialidad-']:hover .logo-small{
+  color: white;
+}
+
+div[id^='especialidad-']:hover p{
+  color: white;
+}
+
+div[id^='especialidad-']:hover h4{
+  color: white;
+}
+
 .col-sm-4{
   color: black;
 }
